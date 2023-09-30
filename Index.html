@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@600&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=League+Gothic&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 0.2s;
+    /*font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Open Sans', sans-serif;
+    */
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+.body {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 2rem 8rem;
+    color: #373737;
+    font-family: 'Inclusive Sans', sans-serif;
+    
+}
+
+.sec1 {
+    background-image: linear-gradient(#00000033, #00000033), url('./smile.jpg');
+    background-size: cover;
+    padding: 5rem 3rem;
+    align-items: center;
+    display: flex;
+    color: #f3f3f3;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.sec1 div {
+    overflow: hidden;
+    width: min(600px, 100%);
+}
+
+.sec1 div h3 {
+    font-size: 3px;
+    font-weight: 600;
+    text-align: left;
+    margin: 1rem 0;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+.sec2 {
+    padding: 3rem;
+    box-shadow: 0 0 5px #b3b3b3;
+}
+
+.sec2 p, .sec2 span {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #008100;
+}
+
+.sec2 h2 {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.sec2 ul {
+    margin: 0 auto;
+}
+
+.sec2 ul li {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    list-style: inside;
+}
+
+.sec3 {
+    margin: 3rem 0;
+}
+
+.sec3 h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.testimonials {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 4rem 0;
+}
+
+.disclaimer {
+   background: black;
+   color: #a9a9a9;
+}
+
+.testimonials div {
+    width: 47%;
+    margin: 2% 1.5%;
+}
+
+.testimonials img {
+    display: block;
+    width: 100%;
+}
+
+
+.add1 {
+   text-align: center;
+   margin: 0;
+   padding: 1rem 1.2rem;
+}
+
+.sec6 {
+    margin: 5rem 0;
+}
+
+.sec6 h3 {
+    text-align: left;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: #1fbe1c;
+    display: block;
+    width: min(90%, 600px);
+    border-radius: 7px;
+    margin: 1rem auto;
+    text-align: center;
+    box-shadow: 0 5px 5px #7e7e7e;
+    padding: 1rem 0;
+}
+
+a h2 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+a p {
+    color: black;
+}
+
+#lastvideo {
+    background: none;
+    text-decoration: underline;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    color: blue;
+}
+
+.showup {
+    display: none;
+}
+
+.container {
+  margin: 4rem 0;
+  background: #0202021b;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.caution {
+  color: #f82d2d;
+  text-transform: uppercase;
+}
+
+.subheading {
+  padding: .5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.normaltext {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.cta {
+  margin: 2rem auto;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px #0202021b;
+  color: white;
+  background: #300deda0;
+}
+
+.cta:active {
+  transform: scale(0.98);
+}
+
+#mode {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+  background: #000000ad;
+  color: white;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#mode:active {
+  transform: scale(0.89);
+}
+
+.img {
+  object-fit: cover;
+  
+}
+
+.imgbox {
+    box-shadow: 1px 2px 10px #05050531;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.imgtext {
+    padding: 0.5rem; 
+}
+
+.important {
+    color: #1fbe1c;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 680px) {
+    .sec1 {
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .body {
+        padding: 0.5rem
+    }
+    
+    .sec1 {
+        background-position: center;
+        justify-content: center;
+        height: 90vh;
+        padding: 1rem;
+    }
+
+    .sec1 div h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    
+    .sec1 div p {
+        margin: 1.2rem 0;
+        font-size: 15px;
+    }
+
+    .sec2 {
+        padding: 3rem 1rem;
+    }
+
+    .sec2 p, .sec2 span {
+        font-size: 1.5rem;
+    }
+
+    .sec2 ul li {
+        font-size: 1rem;
+    }
+    
+    .round {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .testimonials {
+        flex-flow: column wrap;
+        margin: 3rem 0;
+    }
+
+    .testimonials div {
+        width: 95%;
+        margin: 2rem 1.5%;
+    }
+
+    .sec4 {
+        padding: 2rem 1rem;
+    }
+
+    #sec4btn {
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .sec5 {
+        padding: 3rem 0.6rem;
+    }
+
+    mark {
+        padding: 0;
+    }
+}
+    </style>
+    <title>Affiliate marketing</title>
+</head>
+<body>
+    <button id="mode">
+      <span class="material-symbols-outlined">
+dark_mode
+</span>
+
+<!--<span class="material-symbols-outlined">
+light_mode
+</span>-->
+    </button>
+    <div class="sec1">
+        <div>
+            <h3>
+              How my life changed as a broke University student to a pro Digital Marketer leveraging on this biggest affliate company.
+            </h3>
+          
+        </div>
+    </div>
+    <div class="body">
+        
+        <div class="sec3">
+         <h1 id="intro" class="subheading">
+           Would you like your life to change too and to get rid of earning peanuts after giving much of your time ?
+         </h1>
+          
+            <h1 id="intro"  
+           class="subheading">
+                Welcome to this page but before going further, 
+                <span class="caution">
+                note this !!!
+                </span>
+            </h1>
+            
+            <div class="container">
+              <h1 class="subheading">
+              If you are seeking or looking for :
+              </h1>
+              <p class="normaltext">
+              
+              free things, you probably don't have any money to spend for an exchange of better opportunities, luxurious life and getting a Payable online job as a digital marketer .
+
+              <span class='caution'>
+              Please stop reading at this moment and leave this page now !!!
+              </span>
+              You are on the wrong page and it's probably not for you.
+
+Making money is an exchange of value and not for freebies seekers.
+
+But if you are in the right category who is ready to push his or her carrier to the next level, paying it's cost then you are on the right page and this is for you.
+              </p>
+            </div>
+            
+
+            
+            <div class="container">
+              <h1 class="subheading">
+                Unfortunately , the economy is really demoralizing </h1>
+              <p class="normaltext">
+                 
+                 Dollar rate keeps rising and bills and expenses keep piling up
+
+Yet the salary and income never increase.
+
+I will be showing you this business model called affiliate marketing which you literally sign up with a one time payment of N20,000 on the biggest affiliate company called DIGITSTEM 
+
+The 20k one time payment was to sign me up on this platform , get awarded a certificate after completion of the ultimate money machine program and get recruited as a digital marketer and get paid in dollars weekly.
+
+Within two weeks of registration, I got paid over $1000 . 
+
+This continued till now enjoying weekly payments
+
+              </p>
+            </div>
+            
+            <div class="imgbox">
+             <img class="img" src="/result.jpg">
+             <p class="imgtext normaltext">
+               This is my last week's payment from DIGITSTEM.
+             </p>
+            </div>
+                            <div class="imgbox">
+
+                    <img src="./st3.jpg" class="img" alt="testimonials">
+
+                    <p class="normaltext imgtext">
+                     my last two weeks payment in the month of september
+                    </p>
+                </div>
+                
+                      <div class="testimonials">
+                <div class="imgbox">
+               <h2 class="subheading">
+                 before I started affiliate marketing
+               </h2>
+                    <img src="./Me2.jpg" alt="testimonials">
+                </div>
+                <div class="imgbox">
+                  <h2 class="subheading">
+                after I started affiliate marketing  
+                  </h2>
+                    <img src="./Me1.jpg" alt="testimonials">
+                </div>
+            </div>
+            
+            <div class="container">
+              <p class="normaltext">
+              In the space of two months, my life changed from a broke University student to getting paid weekly.
+
+All it will cost you as a beginner is <span class="important"> a one time payment of N20,000 </span> , your smart phone and data-connection 
+
+
+I will be showing you the exact methods I used and how to replicate the same process used to get good results from this program
+
+The best part is that the biggest affiliate marketing platform is recruiting just 500 people from the billions of people on the internet to be entitled to the same privilege.
+            </p>
+            </div>
+            
+            <div class="container normaltext">
+             Mind you I'm not the only one making it big on this platform.
+
+My students are also getting good results. This business model works for everyone in all parts of the world.
+
+            </div>
+            
+        <div class="testimonials">
+               <h2 class="subheading">
+                 amazing testimonies from my students
+               </h2>
+                <div>
+                    <img src="./st1.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./st2.jpg" alt="testimonials">
+                </div>
+
+            </div>
+            
+            <div class="container">
+              <p class="normaltext">
+               If you want to be among the 500 people to be entitled to this same privilege, 
+
+Click on the link below to join my training class so I can tell you more and guide you on how to get started
+
+              </p>
+              <a href="https://wa.link/6bx61y" class="cta">
+                join class
+              </a>
+            </div>
+            
+            <h1 class="subheading">
+               More testimonials from marketers on this biggest affiliate marketing platform.
+             You are indeed lucky.
+             
+            </h1>
+            
+            <div class="testimonials">
+                <div>
+                    <img src="./imgI.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img1.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img4.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img2.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img3.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img7.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img5.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img6.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img9.jpg" alt="testimonials">
+                </div>
+                <div>
+                    <img src="./img8.jpg" alt="testimonials">
+                </div>
+            </div>
+            
+
+            <a class="cta" href="https://wa.link/6bx61y">
+                join class
+            </a>
+        </div> 
+    </div>
+
+    <div class="add1 disclaimer">
+      This Site Is Not A Part Of The Facebook Website Or Facebook Inc. Additionally, This Site Is Not Endorsed By Facebook In Any Way. FACEBOOK Is A Trademark Of FACEBOOK, Inc.
+
+© 2023 All Right Reserved 
+    </div>
+    
+    
+    <script>
+      const mode = document.getElementById("mode")
+      const modespan = document.querySelector(".material-symbols-outlined")
+      const main = document.querySelector(".body")
+      const h = document.querySelectorAll(".sec1 div h3")
+      
+      let con = true
+      
+      mode.onclick = function() {
+        if(con){
+          con = false
+          main.style.background = '#151515'
+          main.style.color = '#b8b8b8'
+          modespan.innerHTML = "light_mode"
+        } else {
+          con = true
+          main.style.background = 'white'
+          main.style.color = '#373737'
+          modespan.innerHTML = "dark_mode"
+        }
+      }
+      
+    </script>
+</body>
+</html>
